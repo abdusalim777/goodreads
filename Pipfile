@@ -12,6 +12,7 @@ rabbitmq = "*"
 celery = "*"
 djangorestframework = "*"
 dj-database-url = "*"
+whitenoise = "*"
 
 [dev-packages]
 
