@@ -78,20 +78,21 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'Goodreads',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5433',
-#         'USER': 'postgres',
-#         'PASSWORD': 'abdusalim',
-#
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.parse('postgres://goodreads_ladf_user:x2PbWb7bPLOgF5KwQ9i19uryw5acoZ5S@dpg-cmqtbsn109ks73fenrc0-a.oregon-postgres.render.com/goodreads_ladf')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Goodreads',
+        'HOST': '127.0.0.1',
+        'PORT': '5433',
+        'USER': 'postgres',
+        'PASSWORD': 'abdusalim',
+
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://goodreads_ladf_user:x2PbWb7bPLOgF5KwQ9i19uryw5acoZ5S@dpg-cmqtbsn109ks73fenrc0-a.oregon-postgres.render.com/goodreads_ladf')
+# }
 
 # DATABASES['default'] = dj_database_url.parse(
 #     'postgres://goodreads_ucca_user:dlz8h7wVRFstnkIwh4ACUeX1OsBzrleh@dpg-cmqi3p7109ks73fcm6eg-a.oregon-postgres.render.com/goodreads_ucca')
