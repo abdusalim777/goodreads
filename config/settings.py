@@ -18,7 +18,7 @@ LOGIN_URL = 'users:login'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-mohirdev-demo.uz', 'www.django-mohirdev-demo.uz', '127.0.0.1']
+ALLOWED_HOSTS = ['goodreads.uz', 'www.goodreads.uz', '127.0.0.1']
 
 # Application definition
 
@@ -134,14 +134,14 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = 'media-files'
-MEDIA_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/media'
+MEDIA_ROOT = '/home/goodread/goodreads.uz/django/media'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/staticfiles'
-STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/static',)
+STATIC_ROOT = '/home/goodread/goodreads.uz/django/staticfiles'
+STATICFILES_DIRS = ('/home/goodread/goodreads.uz/django/static',)
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'static'
 # ]
