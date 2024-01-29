@@ -1,22 +1,19 @@
 from pathlib import Path
-import dj_database_url
-import environ
-import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-env = environ.Env()
-environ.Env.read_env()
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-91@54_7e$es@%a&74*f&po19jpux&46#)uzbbmh*tk84f72=^7'
+SECRET_KEY = config('SECRET_KEY')
 
 LOGIN_URL = 'users:login'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['goodreads.uz', 'www.goodreads.uz', '127.0.0.1']
 
@@ -83,23 +80,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Goodreads',
-        'HOST': '127.0.0.1',
-        'PORT': '5433',
-        'USER': 'postgres',
-        'PASSWORD': 'abdusalim',
+        'NAME': config('DB_NAME'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
 
     }
 }
-
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://goodreads_ladf_user:x2PbWb7bPLOgF5KwQ9i19uryw5acoZ5S@dpg-cmqtbsn109ks73fenrc0-a.oregon-postgres.render.com/goodreads_ladf')
-# }
-
-# DATABASES['default'] = dj_database_url.parse(
-#     'postgres://goodreads_ucca_user:dlz8h7wVRFstnkIwh4ACUeX1OsBzrleh@dpg-cmqi3p7109ks73fcm6eg-a.oregon-postgres.render.com/goodreads_ucca')
-
-# postgres://goodreads_ucca_user:dlz8h7wVRFstnkIwh4ACUeX1OsBzrleh@dpg-cmqi3p7109ks73fcm6eg-a.oregon-postgres.render.com/goodreads_ucca
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -133,20 +121,18 @@ USE_TZ = True
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MEDIA_URL = '/media/'
-# MEDIA_ROOT = 'media-files'
 MEDIA_ROOT = '/home/goodread/goodreads.uz/django/media'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = '/home/goodread/goodreads.uz/django/staticfiles'
 STATICFILES_DIRS = ('/home/goodread/goodreads.uz/django/static',)
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'static'
 # ]
 
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
