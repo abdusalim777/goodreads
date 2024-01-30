@@ -121,7 +121,7 @@ USE_TZ = True
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/goodread/goodreads.uz/django/media'
+MEDIA_ROOT = '/home/goodread/goodreads.uz/django/media-files'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
