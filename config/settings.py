@@ -169,6 +169,7 @@ import environ
 
 from decouple import config
 import os
+
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
@@ -265,7 +266,8 @@ DATABASES = {
 
 import os, dj_database_url
 
-DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
+DATABASES['default'] = dj_database_url.parse(
+    'postgres://goodreads_nkdh_user:IACDZKOeUdiBUPFTA6a53QpIRUaWn6DA@dpg-cmsrn8a1hbls73cl480g-a.oregon-postgres.render.com/goodreads_nkdh')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
