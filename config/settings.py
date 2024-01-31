@@ -140,10 +140,10 @@ STATIC_URL = 'static/'
 # STATIC_ROOT = '/home/goodread/goodreads.uz/django/staticfiles'
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
-STATICFILES_DIRS = BASE_DIR.joinpath('static')
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static'
-# ]
+# STATICFILES_DIRS = BASE_DIR.joinpath('/static/', )
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 
 # Default primary key field type
