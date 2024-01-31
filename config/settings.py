@@ -240,11 +240,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'HOST': config('HOST'),
-        'PORT': config('PORT'),
-        'USER': config('USER'),
-        'PASSWORD': config('PASSWORD'),
+        'NAME': 'Goodreads',
+        'HOST': '127.0.0.1',
+        'PORT': '5433',
+        'USER': 'postgres',
+        'PASSWORD': 'abdusalim'
 
     }
 }
