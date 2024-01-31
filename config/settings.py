@@ -188,7 +188,7 @@ SECRET_KEY = 'django-insecure-91@54_7e$es@%a&74*f&po19jpux&46#)uzbbmh*tk84f72=^7
 LOGIN_URL = 'users:login'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -266,8 +266,8 @@ DATABASES = {
 
 import os, dj_database_url
 
-# DATABASES['default'] = dj_database_url.parse(
-#     'postgres://goodreads_nkdh_user:IACDZKOeUdiBUPFTA6a53QpIRUaWn6DA@dpg-cmsrn8a1hbls73cl480g-a.oregon-postgres.render.com/goodreads_nkdh')
+DATABASES['default'] = dj_database_url.parse(
+    'postgres://goodreads_nkdh_user:IACDZKOeUdiBUPFTA6a53QpIRUaWn6DA@dpg-cmsrn8a1hbls73cl480g-a.oregon-postgres.render.com/goodreads_nkdh')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
