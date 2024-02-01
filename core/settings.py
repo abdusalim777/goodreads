@@ -17,8 +17,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
-
+SECRET_KEY = 'django-insecure-91@54_7e$es@%a&74*f&po19jpux&46#)uzbbmh*tk84f72=^7'
 LOGIN_URL = 'users:login'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -62,7 +61,7 @@ MIDDLEWARE = [
 
 ]
 
-ROOT_URLCONF = 'config.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -82,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -90,11 +89,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'HOST': config('HOST'),
-        'PORT': config('PORT'),
-        'USER': config('USER'),
-        'PASSWORD': config('PASSWORD'),
+        'NAME': 'Goodreads',
+        'HOST': '127.0.0.1',
+        'PORT': '5433',
+        'USER': 'postgres',
+        'PASSWORD': 'abdusalim',
 
     }
 }
@@ -170,7 +169,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # from pathlib import Path
 # import environ
 #
-# from decouple import config
+# from decouple import core
 # import os
 #
 # env = environ.Env(
@@ -230,7 +229,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #
 # ]
 #
-# ROOT_URLCONF = 'config.urls'
+# ROOT_URLCONF = 'core.urls'
 #
 # TEMPLATES = [
 #     {
@@ -250,7 +249,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #     },
 # ]
 #
-# WSGI_APPLICATION = 'config.wsgi.application'
+# WSGI_APPLICATION = 'core.wsgi.application'
 #
 # # Database
 # # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
