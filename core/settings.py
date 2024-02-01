@@ -301,18 +301,18 @@ USE_TZ = True
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-MEDIA_URL = '/home/goodread/goodreads.uz/django/media/'
-MEDIA_ROOT = '/home/goodread/goodreads.uz/django/media-files'
+MEDIA_URL = '/home/goodread/goodreads1.uz/django/media/'
+MEDIA_ROOT = '/home/goodread/goodreads1.uz/django/media-files'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/home/goodread/goodreads.uz/django/static/'
-STATIC_ROOT = ('/home/goodread/goodreads.uz/django/staticfiles', )
+STATIC_URL = '/home/goodread/goodreads1.uz/django/static/'
+STATIC_ROOT = ('/home/goodread/goodreads1.uz/django/staticfiles', )
 
 STATICFILES_DIRS = [
     BASE_DIR,
-    '/home/goodread/goodreads.uz/djangostatic'
+    '/home/goodread/goodreads1.uz/djangostatic'
 ]
 
 # Default primary key field type
