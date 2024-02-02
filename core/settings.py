@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-91@54_7e$es@%a&74*f&po19jpux&46#)uzbbmh*tk84f72=^7
 LOGIN_URL = 'users:login'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['goodreads.uz', 'www.goodreads.uz', '127.0.0.1'
 ALLOWED_HOSTS = ['*']
@@ -85,15 +85,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Goodreads',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5433',
+#         'USER': 'postgres',
+#         'PASSWORD': 'abdusalim',
+#
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Goodreads',
-        'HOST': '127.0.0.1',
-        'PORT': '5433',
-        'USER': 'postgres',
-        'PASSWORD': 'abdusalim',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
