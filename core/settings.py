@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-91@54_7e$es@%a&74*f&po19jpux&46#)uzbbmh*tk84f72=^7
 LOGIN_URL = 'users:login'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['goodreads.uz', 'www.goodreads.uz', '127.0.0.1'
 ALLOWED_HOSTS = ['*']
